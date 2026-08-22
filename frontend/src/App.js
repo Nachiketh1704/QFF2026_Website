@@ -36,7 +36,7 @@ function App() {
   const [countdown, setCountdown] = useState(() => getCountdown(getNextFestivalTarget()));
   const timer = window.setInterval(() => setCountdown(getCountdown(getNextFestivalTarget())), 1000);
   useEffect(() => {
-    document.title = "Qiskit Fall Fest 2025 · Amrita";
+    document.title = "Qiskit Fall Fest 2026 · Amrita";
   }, []);
   const go = () => setMenuOpen(false);
   return <div className="site-shell">
@@ -52,12 +52,12 @@ function App() {
     <main id="top">
       <section className="hero" data-testid="hero-section">
         <div className="hero-copy">
-          <p className="eyebrow" data-testid="hero-eyebrow">Qiskit Fall Fest 2025 <span>///</span> Amrita Vishwa Vidyapeetham, Amritapuri</p>
+          <p className="eyebrow" data-testid="hero-eyebrow">Qiskit Fall Fest 2026 <span>///</span> Amrita Vishwa Vidyapeetham, Amritapuri</p>
           <h1 data-testid="hero-title">Quantum<br /><em>starts here.</em></h1>
           <p className="hero-subtitle" data-testid="hero-subtitle">Celebrating a decade of quantum on the cloud.</p>
           <div className="hero-actions"><a className="button button-primary" href="https://forms.cloud.microsoft/r/Z1vAFZ6jcz" target="_blank" rel="noreferrer" data-testid="hero-register-button">Register now <ArrowUpRight size={17} /></a><a className="button button-ghost" href="#event" data-testid="hero-event-button">View event <ArrowUpRight size={17} /></a></div>
         </div>
-        <div className="hero-meta" data-testid="hero-event-meta"><div><CalendarDays size={18} /><span>15th – 16th<br /><b>November 2025</b></span></div><div><MapPin size={18} /><span>Amritapuri<br /><b>Campus, Kerala</b></span></div></div>
+        <div className="hero-meta" data-testid="hero-event-meta"><div><CalendarDays size={18} /><span>15th – 16th<br /><b>November 2026</b></span></div><div><MapPin size={18} /><span>Amritapuri<br /><b>Campus, Kerala</b></span></div></div>
         <div className="hero-stamp" data-testid="hero-campus-note">OPEN TO ALL<br /><span>DISCIPLINES</span></div>
       </section>
 
@@ -73,7 +73,7 @@ function App() {
 
       <section className="venue" data-testid="venue-section"><div className="venue-content"><div className="section-kicker">06 <span>FIND US</span></div><h2 data-testid="venue-heading">See you<br /><em>at Amritapuri.</em></h2><p data-testid="venue-address">Amrita Vishwa Vidyapeetham, Amritapuri Campus<br />Clappana P.O., Vallikavu, Kerala 690525, India</p><a className="button button-primary" href="https://maps.google.com/?q=Amrita+Vishwa+Vidyapeetham+Amritapuri" target="_blank" rel="noreferrer" data-testid="venue-map-button">Open in maps <ArrowUpRight size={17} /></a></div><div className="venue-mark">A<sup>+</sup></div></section>
     </main>
-    <footer data-testid="site-footer"><div className="footer-brand"><img src="/assets/Pictogram/SVG/qiskit_white.svg" alt="Qiskit" /><span>FALLFEST<br /><b>AMRITA</b></span></div><div><p>Celebrating a decade of quantum on the cloud</p><p className="footer-contact">Contact us: <a href="mailto:qiskitfallfestamrita@gmail.com">qiskitfallfestamrita@gmail.com</a><br />Phone No: <a href="tel:+919778260669">+91 97782 60669</a></p></div><div className="socials"><a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram" data-testid="instagram-link"><Instagram size={18} /></a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn" data-testid="linkedin-link"><Linkedin size={18} /></a></div><div className="powered-by" data-testid="powered-by"><small>Powered by</small><img src="/assets/IBM_Quantum/Raster/RGB/IBM_Quantum_logotype_rev_RGB.png" alt="IBM Quantum" data-testid="ibm-quantum-footer-logo" /></div><small>© 2025 Qiskit Fall Fest · Amrita Vishwa Vidyapeetham</small></footer>
+    <footer data-testid="site-footer"><div className="footer-brand"><img src="/assets/Pictogram/SVG/qiskit_white.svg" alt="Qiskit" /><span>FALLFEST<br /><b>AMRITA</b></span></div><div><p>Celebrating a decade of quantum on the cloud</p><p className="footer-contact">Contact us: <a href="mailto:qiskitfallfestamrita@gmail.com">qiskitfallfestamrita@gmail.com</a><br />Phone No: <a href="tel:+919778260669">+91 97782 60669</a></p></div><div className="socials"><a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram" data-testid="instagram-link"><Instagram size={18} /></a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn" data-testid="linkedin-link"><Linkedin size={18} /></a></div><div className="powered-by" data-testid="powered-by"><small>Powered by</small><img src="/assets/IBM_Quantum/Raster/RGB/IBM_Quantum_logotype_rev_RGB.png" alt="IBM Quantum" data-testid="ibm-quantum-footer-logo" /></div><small>© 2026 Qiskit Fall Fest · Amrita Vishwa Vidyapeetham</small></footer>
   </div>;
 }
 
