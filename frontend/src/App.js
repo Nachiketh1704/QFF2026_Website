@@ -14,7 +14,7 @@ const faqs = [["Who can attend?", "Everyone is welcome — students, researchers
 
 const getNextFestivalTarget = () => {
   const now = new Date();
-  const target = new Date(Date.UTC(now.getUTCFullYear(), 10, 15, 8, 30));
+  const target = new Date(Date.UTC(now.getUTCFullYear(), 10, 25, 3, 30));
   if (target <= now) target.setUTCFullYear(target.getUTCFullYear() + 1);
   return target;
 };
@@ -34,9 +34,10 @@ function App() {
   const [openFaq, setOpenFaq] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [countdown, setCountdown] = useState(() => getCountdown(getNextFestivalTarget()));
-  const timer = window.setInterval(() => setCountdown(getCountdown(getNextFestivalTarget())), 1000);
   useEffect(() => {
     document.title = "Qiskit Fall Fest 2026 · Amrita";
+    const id = window.setInterval(() => setCountdown(getCountdown(getNextFestivalTarget())), 1000);
+    return () => window.clearInterval(id);
   }, []);
   const go = () => setMenuOpen(false);
   return <div className="site-shell">
@@ -52,13 +53,26 @@ function App() {
     <main id="top">
       <section className="hero" data-testid="hero-section">
         <div className="hero-copy">
-          <p className="eyebrow" data-testid="hero-eyebrow">Qiskit Fall Fest 2026 <span>///</span> Amrita Vishwa Vidyapeetham, Amritapuri</p>
+          <p className="eyebrow" data-testid="hero-eyebrow">Qiskit Fall Fest 2026<span>  ///</span><span></span> Amrita Vishwa Vidyapeetham, Amritapuri</p>
           <h1 data-testid="hero-title">Quantum<br /><em>starts here.</em></h1>
           <p className="hero-subtitle" data-testid="hero-subtitle">Celebrating a decade of quantum on the cloud.</p>
           <div className="hero-actions"><a className="button button-primary" href="https://forms.cloud.microsoft/r/Z1vAFZ6jcz" target="_blank" rel="noreferrer" data-testid="hero-register-button">Register now <ArrowUpRight size={17} /></a><a className="button button-ghost" href="#event" data-testid="hero-event-button">View event <ArrowUpRight size={17} /></a></div>
         </div>
         <div className="hero-meta" data-testid="hero-event-meta"><div><CalendarDays size={18} /><span>15th – 16th<br /><b>November 2026</b></span></div><div><MapPin size={18} /><span>Amritapuri<br /><b>Campus, Kerala</b></span></div></div>
         <div className="hero-stamp" data-testid="hero-campus-note">OPEN TO ALL<br /><span>DISCIPLINES</span></div>
+      </section>
+
+      <section className="countdown-section" data-testid="countdown-section">
+        <div className="countdown-label"><b>FEST STARTS IN</b></div>
+        <div className="countdown-values">
+          <div><strong>{String(countdown.days).padStart(2, '0')}</strong><small>DAYS</small></div>
+          <i>:</i>
+          <div><strong>{String(countdown.hours).padStart(2, '0')}</strong><small>HOURS</small></div>
+          <i>:</i>
+          <div><strong>{String(countdown.minutes).padStart(2, '0')}</strong><small>MINS</small></div>
+          <i>:</i>
+          <div><strong>{String(countdown.seconds).padStart(2, '0')}</strong><small>SECS</small></div>
+        </div>
       </section>
 
       <section className="intro section" id="event" data-testid="about-section"><div className="section-kicker">01 <span>ABOUT THE FEST</span></div><div className="intro-layout"><h2 data-testid="about-heading">Student-led<br /><span>quantum festival</span><br />powered by Qiskit.</h2><div className="intro-text"><p>Organized by students at Amrita Vishwa Vidyapeetham, Amritapuri Campus. Join workshops and speaker sessions to explore quantum computing with Qiskit through interactive learning activities.</p><div className="tracks"><div data-testid="track-learn"><b>01</b><strong>Learn</strong><span>Intro to quantum computing, Qiskit basics, and guided labs.</span></div><div data-testid="track-build"><b>02</b><strong>Build</strong><span>Hands-on coding sessions using the Qiskit SDK and tools.</span></div><div data-testid="track-compete"><b>03</b><strong>Compete</strong><span>Mini challenges and activities.</span></div></div><div className="partner-row" data-testid="partner-row"><small>In partnership with</small><div className="partner-marks"><img src="/assets/IBM_Quantum/Raster/RGB/IBM_Quantum_logotype_pos_RGB.png" alt="IBM Quantum" data-testid="ibm-quantum-logo" /><img src="/assets/Pictogram/SVG/qiskit_purple-60.svg" alt="Qiskit" data-testid="partner-qiskit-mark" /></div></div></div></div></section>
