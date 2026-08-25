@@ -3,9 +3,9 @@ import { ArrowUpRight, CalendarDays, ChevronDown, Menu, X, MapPin, Linkedin, Ins
 import "./App.css";
 
 const schedule = [
-  { day: "Day 1", title: "Agenda to be announced", date: "Coming soon", items: [["TBA", "Session details will be announced closer to the event.", ""]] },
-  { day: "Day 2", title: "Agenda to be announced", date: "Coming soon", items: [["TBA", "Session details will be announced closer to the event.", ""]] },
-  { day: "Day 3", title: "Agenda to be announced", date: "Coming soon", items: [["TBA", "Session details will be announced closer to the event.", ""]] },
+  { day: "Day 1", title: "Agenda to be announced", date: "25th November 2026", items: [["TBA", "Session details will be announced closer to the event.", ""]] },
+  { day: "Day 2", title: "Agenda to be announced", date: "26th November 2026", items: [["TBA", "Session details will be announced closer to the event.", ""]] },
+  { day: "Day 3", title: "Agenda to be announced", date: "27th November 2026", items: [["TBA", "Session details will be announced closer to the event.", ""]] },
 ];
 
 const speakers = ["01", "02", "03", "04"];
