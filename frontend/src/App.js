@@ -46,7 +46,7 @@ function App() {
       <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation" data-testid="mobile-menu-button">{menuOpen ? <X /> : <Menu />}</button>
       <nav className={menuOpen ? "nav-links open" : "nav-links"} data-testid="main-navigation">
         {[['About', '#about'], ['Schedule', '#schedule'], ['Speakers', '#speakers'], ['Team', '#team'], ['FAQs', '#faqs']].map(([label, href]) => <a key={label} href={href} onClick={go} data-testid={`nav-${label.toLowerCase()}-link`}>{label}</a>)}
-        <a className="nav-register" href="https://forms.cloud.microsoft/r/Z1vAFZ6jcz" target="_blank" rel="noreferrer" data-testid="nav-register-link">Register <ArrowUpRight size={15} /></a>
+        <a className="nav-register" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__UmnTABUNENQSzJBN09RWE5KUTVLVklMOTZFTVpWQi4u" target="_blank" rel="noreferrer" data-testid="nav-register-link">Register <ArrowUpRight size={15} /></a>
       </nav>
     </header>
 
